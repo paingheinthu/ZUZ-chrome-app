@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta c charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height initial-scal=1">
+        <meta name="viewport" content="width=device-width, height=device-height initial-scal=1">
+        <title>Zawgyi Unicode Convertor</title>
+        <link rel="stylesheet" href="themes/jQueryMobileRGBTheme.css"/>
+        <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.3.min.css" />
+	     <script src="jquery/jquery-1.11.1.min.js"></script>
+	     <script src="jquery/jquery.mobile-1.4.3.min.js"></script>
+       <script src="js/fConvert.js"></script>
+	<style type="text/css">
+		@font-face {
+            font-family: 'zawgyi';
+            src: url('font/ZawgyiOne.ttf') format('truetype');
+        }
+        
+        @font-face 
+        {
+            font-family:'uni'
+                src:url('font/Tharlon-Regular.ttf') format('truetype');
+        }
+        
+        #aboutus
+        {
+            font-family:'uni'
+                src:url('font/Tharlon-Regular.ttf') format('truetype');
+        }
+	</style>
+
+    </head>
+    <body>
+        </script>
+        <div data-role="page" data-theme="a" id="mainContainer">
+            <div data-role="header" data-position="inline">
+                <h1>Zawgyi To Unicode To Zawgyi</h1>
+            </div>
+            
+            <div data-role="content" data-theme="a">
+               	<div data-theme="a">
+					Zawgyi
+				</div>
+				<div>
+					
+					<!--<input id="btnpastezawgyi" onclick="PasteZawgyi()" type="button" value="Paste" style="width:50%;float:left;"/>-->
+					<input id="btnclearzawgyi"  type="button" value="Clear" style="width:50%;float:left;"/>
+				</div>
+				<div>
+					<textarea id="txaZawgyi" rows="10" style="width: 100%;font-family:'Zawgyi-One';  font-size: 15px;height:100%;"></textarea>
+				</div>
+				<div data-theme="a">
+					<input id="btnToUnicode"  type="button" value="To Unicode" data-theme="a"/>
+				</div>
+               	<div data-theme="a">
+				 Unicode
+				</div>
+				<div>
+					<!--<input id="btnpasteuni" onclick="PasteUni()" type="button" value="Paste" data-theme="a"/>-->
+					<input id="btnclearuni"  type="button" value="Clear" data-theme="a"/>
+				</div>
+                <div data-theme="a">
+ 					<textarea id="txaUnicode" rows="15" style="width: 100%;font-family:'TharLon';font-size: 15px;" data-theme="a" rows="50"></textarea>
+				</div> 
+                <div data-theme="a">
+  					<input id="btnToZawgyi"  type="button" value="To Zawgyi" data-theme="a"/>
+				</div>        
+                    
+                          
+
+            </div>
+			
+            <div data-role="footer" data-position="inline" style="text-align:center" data-theme="a">
+                
+				Credit to <a href="http://mrdba.info/unicode-converter/">Mr.DBA Info (Unicode Converter)</a> <br />
+                <p id="aboutus">
+            ဤ Converter သည် ကိုငွေထွန်း၏ Paragu Converter ကိုအခြေခံ၍ ဖန်တီးထားခြင်းဖြစ်ပြီး မြန်မာ အိုင်တီပရို တွင်သုံးထားသည့်အတိုင်း ပြန်လည်ယူသုံးထားခြင်း ဖြစ်ပါသည်။<br/>
+				ပိုင်ဟိန်းသူ နှင့် ငြိမ်းချမ်း မှ ပြန်လည်ရေးဆွဲပါသည်။
+                </p>
+			</div>
+        </div>
+    </body>
+</html>
+     
