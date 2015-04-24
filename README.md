@@ -4,11 +4,9 @@ Credit to
 =========
 * Converter function form [parabeik](https://github.com/ngwestar/parabaik)
 * Main UI from [Mrdba](http://mrdba.info/zawgyi-converter/)
-* copy paste function from [zeroclipboard](https://github.com/zeroclipboard/zeroclipboard)
 
 Functions
 =========
-* Can use copy paste
 * can Clear text
 
 bug
