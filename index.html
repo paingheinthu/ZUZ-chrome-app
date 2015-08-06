@@ -1,84 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta c charset="utf-8">
-        <meta name="viewport" content="width=device-width, height=device-height initial-scal=1">
-        <meta name="viewport" content="width=device-width, height=device-height initial-scal=1">
-        <title>Zawgyi Unicode Convertor</title>
-        <link rel="stylesheet" href="themes/jQueryMobileRGBTheme.css"/>
-        <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.3.min.css" />
-	     <script src="jquery/jquery-1.11.1.min.js"></script>
-	     <script src="jquery/jquery.mobile-1.4.3.min.js"></script>
-       <script src="js/fConvert.js"></script>
-	<style type="text/css">
-		@font-face {
-            font-family: 'zawgyi';
-            src: url('font/ZawgyiOne.ttf') format('truetype');
-        }
-        
-        @font-face 
-        {
-            font-family:'uni'
-                src:url('font/Tharlon-Regular.ttf') format('truetype');
-        }
-        
-        #aboutus
-        {
-            font-family:'uni'
-                src:url('font/Tharlon-Regular.ttf') format('truetype');
-        }
-	</style>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>ZUz Convertor</title>
+    <link rel="stylesheet" href="style/css/main-style.css"/>
+    <link rel="stylesheet" href="angularjs/angular-csp.css"/>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
 
-    </head>
-    <body>
-        </script>
-        <div data-role="page" data-theme="a" id="mainContainer">
-            <div data-role="header" data-position="inline">
-                <h1>Zawgyi To Unicode To Zawgyi</h1>
-            </div>
-            
-            <div data-role="content" data-theme="a">
-               	<div data-theme="a">
-					Zawgyi
-				</div>
-				<div>
-					
-					<!--<input id="btnpastezawgyi" onclick="PasteZawgyi()" type="button" value="Paste" style="width:50%;float:left;"/>-->
-					<input id="btnclearzawgyi"  type="button" value="Clear" style="width:50%;float:left;"/>
-				</div>
-				<div>
-					<textarea id="txaZawgyi" rows="10" style="width: 100%;font-family:'Zawgyi-One';  font-size: 15px;height:100%;"></textarea>
-				</div>
-				<div data-theme="a">
-					<input id="btnToUnicode"  type="button" value="To Unicode" data-theme="a"/>
-				</div>
-               	<div data-theme="a">
-				 Unicode
-				</div>
-				<div>
-					<!--<input id="btnpasteuni" onclick="PasteUni()" type="button" value="Paste" data-theme="a"/>-->
-					<input id="btnclearuni"  type="button" value="Clear" data-theme="a"/>
-				</div>
-                <div data-theme="a">
- 					<textarea id="txaUnicode" rows="15" style="width: 100%;font-family:'TharLon';font-size: 15px;" data-theme="a" rows="50"></textarea>
-				</div> 
-                <div data-theme="a">
-  					<input id="btnToZawgyi"  type="button" value="To Zawgyi" data-theme="a"/>
-				</div>        
-                    
-                          
 
-            </div>
-			
-            <div data-role="footer" data-position="inline" style="text-align:center" data-theme="a">
-                
-				Credit to <a href="http://mrdba.info/unicode-converter/">Mr.DBA Info (Unicode Converter)</a> <br />
-                <p id="aboutus">
-            ဤ Converter သည် ကိုငွေထွန်း၏ Paragu Converter ကိုအခြေခံ၍ ဖန်တီးထားခြင်းဖြစ်ပြီး မြန်မာ အိုင်တီပရို တွင်သုံးထားသည့်အတိုင်း ပြန်လည်ယူသုံးထားခြင်း ဖြစ်ပါသည်။<br/>
-				ပိုင်ဟိန်းသူ နှင့် ငြိမ်းချမ်း မှ ပြန်လည်ရေးဆွဲပါသည်။
-                </p>
-			</div>
-        </div>
-    </body>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+    <!-- <link rel="import" href="bower_components/paper-input/paper-autogrow-textarea.html"/>
+    <link rel="import" href="bower_components/paper-input/paper-input-decorator.html"/>
+    <link rel="import" href="bower_components/paper-input/paper-input.html"/> -->
+    <script src="js/fConvert.js"></script>
+    <script src="js/FileSaver.js"></script>
+    <script src="js/Bolb.js"></script>
+    <script src="js/app.js"></script>
+
+
+  </head>
+  <body class="element" style="background-color:#eee;" ng-app="appMain" ng-controller="AppCtrl" layout="row" layout-fill ng-csp>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2"  md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-content class="sidenav-header" >
+          <img ng-src="{{profileImagePath}}" class="sidenav-profile-image divTitle mualogo" alt="mua logo">
+          <p style="margin-left:20px; color:#fff;"show-gt-md>Myanmar Unicode Area</p>
+        </md-content>
+        <md-content layout-padding>
+          <md-list>
+            <md-subheader class="md-no-sticky">Convertion</md-subheader>
+            <md-list-item ng-click="toShow='convert'" >
+              <md-icon md-svg-icon="style/img/ic_swap_vertical_circle_black_24px.svg"></md-icon>
+              <p>Convert Text</p>
+            </md-list-item>
+            <md-list-item ng-click="" class="md-actions">
+              <md-icon md-svg-icon="style/img/ic_archive_black_24px.svg"></md-icon>
+              <p>Auto save</p>
+              <md-switch ng-model="saveConverted.saved" aria-label="Auto Save" ng-true-value="'true'" ng-false-value="'false'" ng-change="changeAutoSave()">
+              </md-switch>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-subheader class="md-no-sticky">History</md-subheader>
+            <md-list-item ng-click="toShow='history'" >
+              <md-icon md-svg-icon="style/img/ic_history_black_24px.svg"></md-icon>
+              <p>History</p>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-subheader class="md-no-sticky">Others</md-subheader>
+            <md-list-item ng-click="" >
+              <md-icon md-svg-icon="style/img/ic_help_black_24px.svg"></md-icon>
+              <p>Help</p>
+            </md-list-item>
+            <md-list-item ng-click="showCredit($event)" >
+              <md-icon md-svg-icon="style/img/ic_person_pin_black_24px.svg"></md-icon>
+              <p>Credit</p>
+            </md-list-item>
+            <md-list-item ng-click="showAboutUs($event)" >
+              <md-icon md-svg-icon="style/img/ic_info_black_24px.svg"></md-icon>
+              <p>About Us</p>
+            </md-list-item>
+          </md-list>
+        </md-content>
+      </md-sidenav>
+      <div ng-if="alert" style="font-family:Myanmar3;">
+        <br/>
+        <b layout="row" layout-align="center center" class="md-padding">
+          <p ng-bind-html="alert"></p>
+        </b>
+      </div>
+      <div flex layout="column" layout-fill >
+        <md-toolbar>
+          <div class="md-toolbar-tools divTitle">
+            <h2><span>ZUZ Convertor</span></h2>
+            <span flex></span>
+          </div>
+        </md-toolbar>
+        <md-content class="container md-padding body-content" md-scroll-y flex layout-padding>
+          <div ng-include="'views/convert.html'" ng-show="toShow=='convert'"></div>
+          <div ng-include="'views/history.html'" ng-show="toShow=='history'"></div>
+        </md-content>
+
+      </div>
+  </body>
 </html>
-     

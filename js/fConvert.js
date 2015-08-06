@@ -1,20 +1,6 @@
 /*
 * follwing functions are referenced by Mr.DBA Blog
 */
-
-document.addEventListener('DOMContentLoaded',function() {
-  var btnZawgyiclear = document.getElementById('btnclearzawgyi');
-  var btnUnicodeclear = document.getElementById('btnclearuni');
-
-   var btnZawgyi = document.getElementById('btnToZawgyi');
-  var btnUnicode = document.getElementById('btnToUnicode');
-  
-  btnZawgyiclear.addEventListener('click', zawgyiclear);
-  btnUnicodeclear.addEventListener('click', uniclear);
-
-  btnZawgyi.addEventListener('click', zgconvert);
-  btnUnicode.addEventListener('click', mmconvert);
-});
 function Z1_Uni (input) {
    var output=input;
    var tallAA = "\u102B";
@@ -322,14 +308,14 @@ function Uni_Z1 (input)
    // aukmyint
    return output;
 }
-
+/*
 function mmconvert() {
 src = document.getElementById("txaZawgyi").value;
 document.getElementById("txaUnicode").value = Z1_Uni(src);
 }
 
 function zgconvert() {
-src = document.getElementById("txaUnicode").value;   
+src = document.getElementById("txaUnicode").value;
 document.getElementById("txaZawgyi").value = Uni_Z1(src);
 }
 function uniclear(){
@@ -337,4 +323,4 @@ function uniclear(){
 }
 function zawgyiclear(){
    document.getElementById("txaZawgyi").value = '';
-}
+}*/

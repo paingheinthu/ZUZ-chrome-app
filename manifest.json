@@ -1,12 +1,10 @@
 {
-	"name" : "ZUZ",
-	"description" : "Myanmar Unicode Zawgyi text Converter",
-	"version" : "0.1",
-	"app" : {
-				"background":{ "scripts" : ["scripts.js"]}
-			},
-	"icons" : {
-				"16" : "zUz-16.png",
-				"128" : "zUz-128.png"
-			}
+  "description": "Myanmar Unicode Zawgyi text Converter",
+  "icons": {"128": "style/img/zUz-128.png", "16": "style/img/zUz-16.png"},
+  "manifest_version": 2,
+  "app": {
+   "launch": {"local_path": "app.html"}
+  },
+  "name": "ZUZ",
+  "version": "0.2"
 }
