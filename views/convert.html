@@ -1,0 +1,28 @@
+<md-content class="md-padding body-content" md-scroll-y flex layout-padding ng-app="appMain" ng-controller="AppCtrl" id="convertContent">
+  <md-card flex>
+    <md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <span flex>&nbsp;</span>
+        Convert To : {{ convertSwitch.uni }}
+        <md-switch ng-model="convertSwitch.uni" aria-label="Convert To" ng-true-value="'Zawgyi'" ng-false-value="'Unicode'" ng-change="changeConvertType()">
+        </md-switch>
+      </div>
+      <md-divider></md-divider>
+      <md-input-container md-scroll-y>
+        <label ng-class="convertType == 'Unicode' ? 'zgy-font-face' : 'uni-font-face'" >{{convertType == 'Zawgyi' ? 'မြန်မာ ယူနီကုဒ်': 'ေဇာ္ဂ်ီ'}}</label>
+        <textarea ng-class="convertType == 'Unicode' ? 'zgy-font-face' : 'uni-font-face'"  ng-model="mmText"></textarea>
+
+      </md-input-container>
+      <span flex>&nbsp;</span>
+      <md-divider></md-divider>
+    </md-card-content>
+
+    <div class="md-actions" layout="row" layout-align="end center">
+      <span flex>&nbsp;</span>
+      <md-button ng-click="clear()">CLEAR</md-button>
+      <md-button class="md-primary" ng-click="convert()">CONVERT</md-button>
+    </div>
+  </md-card>
+</md-content>
+<!--style="font-family:{{convertType == 'Unicode' ? 'Zawgyi-One' : 'Myanmar3'}}"
+ng-style="changeEmbedFontStyle(convertType)"-->

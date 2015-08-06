@@ -1,0 +1,13 @@
+<md-content class="md-padding body-content" md-scroll-y flex layout-padding ng-app="appMain" ng-controller="AppCtrl">
+  <md-card class="md-raised" flex ng-repeat="x in names">
+    <md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <label>{{x.date}}</label>
+        <span flex>&nbsp;</span>
+        <label ng-class="{{x.method == 'uz' ? 'Zawgyi-One' : 'Myanmar3'}}">{{x.method == 'zu' ? 'မြန်မာ ယူနီကုဒ်': 'ေဇာ္ဂ်ီ'}}</label>
+      </div>
+      <md-divider></md-divider>
+      <label>{{x.text}}</label>
+    </md-card-content>
+  </md-card>
+</md-content>

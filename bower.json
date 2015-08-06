@@ -1,0 +1,19 @@
+{
+  "name": "zuz",
+  "version": "0.0.2",
+  "description": "Myanmar Unicode Zawgyi Converter based on Ko Ngwe Tun's Paragu and I reuse as a Myanmar IT Pro's usage.",
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "Nyein Chan"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

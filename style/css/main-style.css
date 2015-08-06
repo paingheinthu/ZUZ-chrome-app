@@ -1,0 +1,72 @@
+.body-content {
+  background-color: #eee;
+  overflow-y:scroll;
+}
+
+body {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01rem;
+  color: #000;
+  background-color: #fee;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-background-size: cover; /* For WebKit*/
+  -moz-background-size: cover;    /* Mozilla*/
+  -o-background-size: cover;      /* Opera*/
+  background-size: cover;         /* Generic*/
+}
+
+.divTitle {
+  background-color:#f50000;
+  color:#fff;
+  box-shadow: -0 5px 7px -3px rgba(0, 0, 0, 0.25);
+  margin:0px;
+}
+
+.element {
+    overflow: hidden
+}
+
+@font-face {
+    font-family: 'zawgyi';
+    src: url('../fonts/ZawgyiOne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'uni';
+        src:url('../fonts/mm3.ttf') format('truetype');
+}
+.zgy-font-face {
+  font-family: 'zawgyi';
+  overflow: hidden;
+}
+
+  .uni-font-face {
+  font-family: 'uni';
+  overflow: hidden
+}
+.aboutus {
+    font-family:'uni', 'Myanmar3';
+        /*src:url('../fonts/mm3.ttf') format('truetype');*/
+}
+
+.sidenav-header {
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-image: url('../img/MUA_FBGroup_Cover.png');
+  back
+  height: 160px;
+}
+
+.sidenav-profile-image {
+  margin-left: 20px;
+  margin-top: 40px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
